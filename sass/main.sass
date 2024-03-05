@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap')
 @import "vars"
-@import "adaptive"
 *
 	margin: 0
 	padding: 0
@@ -48,7 +47,6 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	opacity: 1
-	// background: pink
 
 img
 	max-width: 100%
@@ -117,15 +115,66 @@ img
 				margin-right: 40px
 				>li
 					display: inline-block
-					>a
+					position: relative
+					a
 						display: block
 						text-decoration: none
-						font-size: 14px
 						font-weight: 600
 						color: #000
 						transition: color 1s ease
+						padding: 5px 20px 5px 0
 						&:hover
 							color: $accent
+					// &:first-child a
+						// padding-right: 20px
+						// padding: 5px 20px 5px 0
+							
+					>.sub_menu
+						position: absolute
+						top: 35px
+						background-color: #fff
+						box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
+						z-index: 10
+						border-radius: 5px
+						padding: 5px 0
+						opacity: 0
+						transition: opacity .1s ease
+						animation: opac 4s
+						display: none
+						>li
+							display: block
+							>a
+								font-size: 14px
+								padding: 4px 10px
+					&.has_sub_menu
+						&:hover >.sub_menu
+							opacity: 1
+							display: block
+						&::after
+							content: ''
+							display: block
+							width: 8px
+							height: 4px
+							background-image: url('../img/Arrow_down.svg')
+							background-size: cover
+							background-repeat: no-repeat
+							background-position: center
+							position: absolute
+							top: 16px
+							right: 10px
+							cursor: pointer
+							transition: all 1s ease
+						&:hover
+							&::after
+								transition: all 1s ease
+								transform: rotate(180deg)
+								
+@keyframes opac
+	from
+		opacity: 0
+	to
+		opacity: 1
+
 
 .main_banner
 	padding: 240px 0 380px
