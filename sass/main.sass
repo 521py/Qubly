@@ -276,3 +276,54 @@ section.information
 		>.descr
 			color: $gray
 			font-size: 16px
+
+#reviews
+	padding: 350px 0
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	background-image: url("/img/reviews/bg.svg")
+	.item_rev
+		text-align: center
+		display: none
+		animation: opac .6s
+		&.active
+			display: block
+		>.quote
+			color: $dark_accent
+			font-size: 22px
+			margin: 0 auto 16px
+			min-width: 660px
+			height: 100px
+		>img
+			width: 80px
+			height: 80px
+			background-repeat: 50%
+		>.name
+			margin-top: 16px
+		>.name, >.position
+			color: #111
+			font-weight: 900
+	.line
+		height: 1px
+		width: 100%
+		background-color: #dec9fa
+		margin: 56px 0
+	.nav_rev
+		display: flex
+		align-items: center
+		justify-content: space-between
+		flex-wrap: wrap
+		>div
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 16%
+			filter: grayscale(1)
+			transition: all .1s ease
+			&:hover, &.active
+				filter: grayscale(0)
+				transform: scale(1.1)
+			>img
+				cursor: pointer
+				height: 50px
