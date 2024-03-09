@@ -4,18 +4,113 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
-
+	.main_banner
+		padding: 170px 0 220px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
-
+	.main_banner 
+		padding: 100px 0 160px
+		.mb_info 
+			>h1
+				font-size: 45px
+			>.descr
+				margin-bottom: 20px
+	section
+		padding: 80px 0
+	#advantages
+		.row_adv
+			.item_adv
+				>.heading
+					margin: 16px 0
+	#reviews
+		padding: 170px 0
+		.item_rev 
+			>.quote
+				margin: 0 auto 50px
+	.pf_info
+		margin-bottom: 120px
+	#pre_footer 
+		.pf_info 
+			>.pf_images
+				justify-content: space-around
+	#footer
+		.row_flex
+			.col_footer_1, .col_footer_3
+				width: 48%
+				order: 2
+			.col_footer_2
+				width: 100%
+				margin-bottom: 30px
+				order: 1
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
-
+	#header
+		.inner_header
+			.right_side_header
+				>.btn_simple
+					display: none
+				.mnu_top 
+					gap: 10px
+					>li 
+					>li.has_sub_menu::after
+						right: 5px
+	.main_banner
+		padding: 50px 0 170px
+		.img_responsive
+			margin: 0 auto
+			max-width: 80%
+		.mb_info 
+			>h1
+				font-size: 40px
+	section
+		padding: 60px 0
+		&.information
+			.img_responsive
+				display: none
+			.right_info
+				padding: 0 10px
+				text-align: center
+				.notif
+					margin: 0 auto
+				>h3
+					font-size: 34px
+	#advantages
+		.heading_main
+			display: inline
+			flex-wrap: wrap
+			h2
+				font-size: 34px
+				margin: 15px auto
+			.description
+				font-size: 16px
+				margin-bottom: 10px
+		.row_adv
+			>div
+				width: 50%
+				.item_adv
+					text-align: center
+					margin: 0 auto
+					max-width: 240px
+					>.heading
+						margin: 10px 0
+						font-size: 22px
+					>.descr
+						font-size: 14px
+	#reviews
+		.item_rev
+			>.quote
+				display: table-footer-group
+				height: 100px
+				font-size: 16px
+	#pre_footer
+		.pf_info
+			h4
+				font-size: 34px
+				text-align: center
+	#footer
+		padding: 30px 0
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
