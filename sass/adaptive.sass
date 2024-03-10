@@ -53,7 +53,6 @@
 					display: none
 				.mnu_top 
 					gap: 10px
-					>li 
 					>li.has_sub_menu::after
 						right: 5px
 	.main_banner
@@ -114,9 +113,116 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
-
-
+	.hamburger
+		display: block
+	#header
+		position: relative
+		padding-top: 14px
+		.inner_header
+			.right_side_header
+				.mnu_top
+					display: none
+					position: absolute
+					top: 70px
+					right: 0
+					left: 0
+					width: 100%
+					box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16)
+					background-color: #fff
+					padding: 10px 0
+					z-index: 11
+					>li
+						display: block
+						>a
+							padding: 5px 15px
+						>.sub_menu
+							display: block
+							position: relative
+							top: auto
+							box-shadow: none
+							border-radius: 0
+							animation: none
+							padding-left: 15px
+							opacity: 1
+					>li.has_sub_menu::after
+						display: none
+	#top_banner
+		background-color: #f5faff !important
+		background-image: none !important
+		.main_banner
+			text-align: center
+			padding: 20px 0 50px
+			.mb_info
+				>h1
+					font-size: 30px
+				>.descr
+					font-size: 14px
+				>.btns
+					flex-wrap: wrap
+					>a
+						display: block
+						width: 100%
+	.notif
+		margin: 0 auto
+	#advantages
+		.notif
+			font-size: 14px
+		.heading_main
+			margin: 25px 0
+			>h2
+				font-size: 25px
+			>.description
+				font-size: 14px
+				margin-bottom: 30px
+		.row_adv
+			gap: 30px
+			>div
+				width: 100%
+	section
+		padding: 40px 0
+	section.information
+		.right_info
+			>h3
+				font-size: 25px
+	#pre_footer
+		.pf_info
+			>h4
+				font-size: 25px
+			>.pf_images 
+				>.pf_images_above, .pf_images_under
+					width: 100%
+		.form_wrapper 
+			>form
+				width: 100%
+				padding: 16px
+				transform: none
+				.footer_form 
+					>.line
+						margin: 22px 0
+	#reviews
+		.nav_rev
+			flex-wrap: wrap
+			>div
+				width: 100%
+				img
+					width: 100%
+					margin: 10px auto
+		.item_rev 
+			>.quote
+				display: flex
+				align-items: center
+				justify-content: center
+				font-size: 14px
+				min-width: 0
+				margin-bottom: 10px
+	#footer
+		.mnu_footer_wrapper
+			.mnu_footer
+				&:nth-child(1)
+					margin-bottom: 14px
+				&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4)
+					width: 50%
+					
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
