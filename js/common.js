@@ -22,4 +22,33 @@ $(function () {
     $(revID).addClass('active');
   });
   // reviews tabs
+
+  // anchor
+  $('.anchor').on('click', function (event) {
+    var $anchor = $(this);
+    var scrollTopValue;
+
+    if ($(window).width() <= 991) {
+      scrollTopValue = $($anchor.attr('href')).offset().top + 500;
+    } else {
+      scrollTopValue = $($anchor.attr('href')).offset().top - 57;
+    }
+
+    $('html, body')
+      .stop()
+      .animate(
+        {
+          scrollTop: scrollTopValue,
+        },
+        {
+          duration: 2000,
+          specialEasing: {
+            width: 'linear',
+            height: 'easeInOutCubic',
+          },
+        }
+      );
+    event.preventDefault();
+  });
+  // anchor
 });

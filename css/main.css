@@ -336,7 +336,7 @@ section#top_banner {
 #advantages .row_adv .item_adv > img {
   width: 40px;
   height: 48px;
-  background-repeat: 50%;
+  background-repeat: no-repeat;
 }
 #advantages .row_adv .item_adv > .heading {
   font-size: 24px;
@@ -392,10 +392,11 @@ section.information .right_info > .descr {
 #reviews .item_rev > img {
   width: 80px;
   height: 80px;
-  background-repeat: 50%;
+  background-repeat: no-repeat;
 }
 #reviews .item_rev > .name {
   margin-top: 16px;
+  font-size: 16px;
 }
 #reviews .item_rev > .name, #reviews .item_rev > .position {
   color: #111;
@@ -832,4 +833,31 @@ section.information .right_info > .descr {
 .hamburger.is-active .line:nth-child(3) {
   -webkit-transform: translateY(-9px) rotate(-45deg);
           transform: translateY(-9px) rotate(-45deg);
+}
+
+.animate_graphic {
+  -webkit-animation: 0.4s infinite alternate movingAn;
+          animation: 0.4s infinite alternate movingAn;
+}
+
+@-webkit-keyframes movingAn {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(10px, 0);
+            transform: translate(10px, 0);
+  }
+}
+
+@keyframes movingAn {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(10px, 0);
+            transform: translate(10px, 0);
+  }
 }

@@ -256,7 +256,7 @@ section
 			>img
 				width: 40px
 				height: 48px
-				background-repeat: 50%
+				background-repeat: no-repeat
 			>.heading
 				font-size: 24px
 				font-weight: 700
@@ -301,9 +301,10 @@ section.information
 		>img
 			width: 80px
 			height: 80px
-			background-repeat: 50%
+			background-repeat: no-repeat
 		>.name
 			margin-top: 16px
+			font-size: 16px
 		>.name, >.position
 			color: #111
 			font-weight: 900
@@ -574,3 +575,11 @@ section.information
 		&:nth-child(3)
 			transform: translateY(-9px) rotate(-45deg)
 			
+.animate_graphic
+	animation: .4s infinite alternate movingAn
+
+@keyframes movingAn
+	0%
+		transform: translate(0, 0)
+	100%
+		transform: translate(10px, 0)
